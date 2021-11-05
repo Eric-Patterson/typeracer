@@ -1,0 +1,76 @@
+ <%layout('../layouts/boilerplate') %>
+
+ <% maze = ["/right/first", "/right/second", "/right/third"];
+ let randomItem = maze[Math.floor(Math.random() * maze.length)];%>
+
+<% function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+} %>
+
+
+<h1 id="header"><span id="test"></span>Hello <%= capitalizeFirstLetter(username) %>, welcome to the typing test arena! Good luck and have fun</h1>
+
+<h2>How fast you can type</h2>
+<p>Timer: <span id="minutes">00</span>:<span id="seconds">00</span></p>
+<p>Word Per Minute:<span  id="wpm"> 0</span></p>
+<p>Errors:<span  id="errors">0</span></p>
+<div id="passageContainer">
+<!-- <span id="color"></span><p name="" id="passage" cols="60" rows="10"></p> -->
+<span id="color" class="shake"></span><textarea name="" id="passage" cols="60" rows="1"></textarea>
+</div>
+<p id="log"></p>
+
+<form method="post" action="/leaderboard" >
+  <input type="number" id="timer" name="timer" class="typeRaceForm" value="0">
+  <input type="number" id="wordspm" name="wordspm" class="typeRaceForm" value="0">
+  <input type="number" id="error" name="error" class="typeRaceForm">
+  <button class="submitBtn" type="submit">Submit Results!</button>
+</form>
+<div class="btnContainer">
+<a id="leaderboardBtn" href="/leaderboardShow">Leaderboard</a>
+</div>
+
+
+<!-- 
+<script src="/javascripts/maze.js"></script> -->
+
+<!-- <a href="route-a/first">Take a Left turn</a>
+<a href="route-b/first">Take a Right turn</a> -->
+<!-- <script src="/javascripts/maze.js"></script> -->
+
+
+<!-- <main>
+
+  <h1 id="header"><span id="test"></span>Hello <= capitalizeFirstLetter(username) >, welcome to the typing test arena! Good luck and have fun</h1>
+  
+  <h2>How fast you can type</h2>
+  <p>Timer: <span id="minutes">00</span>:<span id="seconds">00</span></p>
+  <p>Word Per Minute:<span  id="wpm"> 0</span></p>
+  <p>Errors:<span  id="errors">0</span></p>
+  <div id="passageContainer">
+
+  <span id="color" class="shake"></span><textarea name="" id="passage" cols="60" rows="1"></textarea>
+  </div>
+  <p id="log"></p>
+  </main> -->
+
+
+
+
+
+
+
+  <!-- <textarea name="" id="" cols="30" rows="10">
+  Suddenly quite near him there was a rifle shot. He heard the crack and smack and whistling ricochet among the rocks behind him. He dropped his torch and began feebly to trot.
+</textarea> -->
+
+ <!-- right is dangerous but short, left is long but safe -->
+ <!-- <form method="post" action="/left/first">
+     <label for="name">Left</label>
+     <input type="submit" value="Submit">
+   </form> -->
+ <!-- <form method="post" action="<= randomItem >"> -->
+ <!-- <form method="post" action="/right/first">
+     <label for="name">Right</label>
+     <input type="submit" value="Submit">
+   </form> -->

@@ -1,0 +1,31 @@
+<% layout('../layouts/boilerplate') %>
+<h1>Welcome to the leaderboard</h1>
+
+
+<div class="checkout-main">
+
+    <section class="checkout-products">
+        <table>
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Words Per Minute</th>
+                    <th>Time Taken</th>
+                    <th>Errors</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <% for(let user of users){ %>
+                <tr>
+                    
+                    <td><%=user.username %></td>
+                    <td><%=user.wordsPerMinute %></td>
+                    <td><%=user.time %></td>
+                    <td><%=user.error %></td>
+                   
+                </tr>
+                <% } %> 
+            </tbody>
+        </table>

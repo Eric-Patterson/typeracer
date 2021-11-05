@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #333;
+  color: #eee;
+  font-family: monospace;
+  overflow: hidden; /* Hide scrollbars */
+}
+main {
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 120vh;
+}
+#header {
+  color: #eee;
+  /* border: 1px solid blue; */
+}
+
+/* hides the form data to the user */
+.typeRaceForm {
+  display: none;
+}
+
+/* #passageContainer {
+  border: 1px solid red;
+} */
+.submitBtn {
+  padding: 1em;
+  color: #333;
+  text-decoration: none;
+  background-color: #eee;
+  padding: 0.75em;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.btnContainer {
+  padding-top: 2em;
+}
+#leaderboardBtn {
+  color: #333;
+  text-decoration: none;
+  background-color: #eee;
+  padding: 0.75em;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.color {
+  padding-top: 7px;
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #333;
+  border: none;
+  border-left: 5px solid lightblue;
+  font-size: 1.6rem;
+  animation: blinkAnimation 1s linear infinite;
+}
+
+.colors {
+  padding-top: 7px;
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #333;
+  border: none;
+  border-left: 5px solid red;
+  font-size: 1.6rem;
+  animation: blinkAnimation2 1s linear infinite;
+}
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+.shake2 {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+#passage {
+  color: #eee;
+  display: inline;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #333;
+  border: none;
+  font-size: 1.6rem;
+  resize: none;
+}
+@keyframes blinkAnimation {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: lightblue;
+  }
+}
+@keyframes blinkAnimation2 {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: red;
+  }
+}
+
+/* ------------------------ leaderboard -------------------- */
+
+/* Color Pallete
+Orange : #F6921E
+Grey : #404041
+Blue: #1DB5F5
+*/
+:root {
+  --lightBlue: rgba(29, 181, 245, 0.2);
+  --blue: #1db5f5;
+  --grey: #404041;
+  --orange: #f6921e;
+  /* var(--blue;) */
+}
+
+.checkout-main {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  gap: 2em;
+  margin-top: 5em;
+}
+.checkout-products {
+  width: 100%;
+  /* border: 1px solid red; */
+  font-size: 1.3em;
+}
+table {
+  /* background-color: white; */
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 5px;
+}
+table:nth-of-type(2) {
+  margin-top: 3em;
+}
+thead,
+th {
+  background-color: var(--blue);
+  font-weight: normal;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  padding: 0 1em;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* tr:nth-child(odd){
+  background-color: white;
+}
+tr:nth-child(even){
+  background-color: var(--lightBlue);
+} */
+
+tbody tr:hover {
+  background-color: var(--lightBlue);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: var(--lightBlue);
+  z-index: -1;
+}
+
+.no-padding {
+  padding-right: 0;
+}
+.checkout-info {
+  padding: 2em;
+  border: 3px solid black;
+  border-radius: 3px;
+  height: min-content;
+  background-color: white;
+}
+.form input,
+.form label {
+  display: block;
+  outline: none;
+  border-radius: 3px;
+}
+.form input {
+  background-color: var(--grey);
+  color: white;
+}
+
+#submit,
+#reset {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  color: black;
+  border-radius: 3px;
+  border: none;
+  padding: 0.3em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2em;
+  background: linear-gradient(
+    to right,
+    var(--blue),
+    var(--blue) 49%,
+    var(--orange) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+
+  outline: none;
+  transition: all 0.3s ease 0s;
+}
+#submit:hover,
+#reset:hover {
+  background-position: 0 100%;
+  transform: translateY(-7px);
+}
+
+/* ----------------------------- Nav css ----------------------------- */
+li {
+  list-style-type: none;
+}
+li a:hover:not(.active) {
+  background-color: #eee;
+  color: #333;
+}
+.navLi a,
+.start {
+  padding: 14px 16px;
+  font-size: 1.5em;
+  color: #eee;
+  text-decoration: none;
+}
+
+/* ---------------------- Forms --------------------------- */
+label {
+  font-size: 25px;
+}
+.login input[type="submit"] {
+  color: #333;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/* .login input[type="submit"]:hover {
+  color: #eee;
+} */

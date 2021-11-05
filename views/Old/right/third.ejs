@@ -1,0 +1,15 @@
+<% layout('../layouts/boilerplate') %>
+
+
+
+<h1>This is the second right turn ----- Delete this later</h1>
+<% phrase = ["Well, well, well. Theres a chance you can squeeze thru the fence to make the journy faster. Try your luck?", "How high can you jump. You hit a dead end, do you attempt to jump thru the bush?", "I have some good and bad news. Good news, its a 50/50 choice. Bad news, its a 50/50 toss up" ] 
+let randomPhrase = phrase[Math.floor(Math.random() * phrase.length)];%>
+<h2><%= randomPhrase %></h2>
+
+<form method="post" action="/right/thirdY">
+    <input type="submit" value="Yes">
+  </form>
+<form method="post" action="/right/thirdN">
+    <input type="submit" value="No">
+  </form>

@@ -1,0 +1,12 @@
+<% layout('../layouts/boilerplate') %>
+
+<h1>Hello <%= name %>, welcome to the maze</h1>
+<h2>You have two choices, left or right? Which would you prefer to take?</h2>
+<form method="post" action="/left/first">
+    <label for="name">Left</label>
+    <input type="submit" value="Submit">
+  </form>
+<form method="post" action="/right/first">
+    <label for="name">Right</label>
+    <input type="submit" value="Submit">
+  </form>

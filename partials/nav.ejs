@@ -1,0 +1,13 @@
+<nav>
+    <ul>
+        <li class="navLi">
+            <a href="/">Home</a>
+            <% if(!currentUser){ %> 
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <% }else{ %> 
+            <a href="/logout"> Logout </a>
+            <% }%>
+        </li>
+    </ul>
+</nav>

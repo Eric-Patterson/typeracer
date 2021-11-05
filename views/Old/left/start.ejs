@@ -1,0 +1,32 @@
+<%layout('../layouts/boilerplate') %>
+
+<% maze = ["/right/first", "/right/second", "/right/third"];
+let randomItem = maze[Math.floor(Math.random() * maze.length)];%>
+
+<% function capitalizeFirstLetter(string) {
+   return string.charAt(0).toUpperCase() + string.slice(1);
+} %>
+<h1>Hello <%= capitalizeFirstLetter(username) %>, welcome to the Maze! This is an experimental text based adventure game. I hope you enjoy your stay</h1>
+<div>
+   <p>You have two choices you can make,</p>
+    <p>Right: Short although dangerous</p>
+    <p>Left: Long, however safer</p>
+   </div>
+
+<!-- right is dangerous but short, left is long but safe -->
+<form method="post" action="/left/first">
+    <label for="name">Left</label>
+    <input type="submit" value="Submit">
+  </form>
+<!-- <form method="post" action="<= randomItem >"> -->
+<form method="post" action="/right/first">
+    <label for="name">Right</label>
+    <input type="submit" value="Submit">
+  </form>
+
+
+<script src="/javascripts/maze.js"></script>
+
+<!-- <a href="route-a/first">Take a Left turn</a>
+<a href="route-b/first">Take a Right turn</a> -->
+<!-- <script src="/javascripts/maze.js"></script> -->

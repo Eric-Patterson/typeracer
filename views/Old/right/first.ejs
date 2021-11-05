@@ -1,0 +1,141 @@
+<% layout('../layouts/boilerplate') %>
+<!-- <h1>This is first right turn ----- Delete this later</h1>
+<h2>You can skip across the shallow lake around the left bend, or take the narrow bushy road to the right...</h2>
+
+<form method="post" action="/right/secondL">
+    <label for="name">Left</label>
+    <input type="submit" value="Submit">
+  </form>
+  <form method="post" action="/right/secondR">
+    <label for="name">Right</label>
+    <input type="submit" value="Submit">
+  </form> -->
+<h1 id="h1">Testing</h1>
+<h2 id="h2">You can skip across the shallow lake around the left bend, or take the narrow bushy road to the right...</h2>
+
+<input type="button" id="left" value="Left"/>
+<input type="button" id="right" value="Right" />
+
+
+<script>
+  
+  // let display = false;
+  // function action() {
+  //   display = !display;
+  //     if(display) {
+  //         // document.getElementById('togglee').style.display = 'none';
+  //         document.getElementById("h1").classList.add("hidden")
+  //         document.getElementById("h1").classList.remove("hidden")
+  //     } else {
+          
+  //     }
+  // }
+
+ 
+
+  array = ["something"]
+
+
+  paths = [
+      right = [{
+        path: "First Right",
+        text: "First Right text",
+      }, secondRight = [{
+        path: "Second Right",
+        text: "second right text",
+      },
+      
+      thirdRight = [{
+        path: "Third Right",
+        text: "Third right text",
+      },
+      {
+        path: "Third Left",
+        text: "Third Left text",
+      }],
+      {
+        path: "Second Left",
+        text: "Second Left text",
+      },
+      thirdLeft = [{
+        path: "Third Right",
+        text: "Third right text",
+      },
+      {
+        path: "Third Left",
+        text: "Third Left text",
+      }],
+    ]],
+    left = [{
+        path: "First Right",
+        text: "First Right text",
+      }, secondRight = [{
+        path: "Second Right",
+        text: "second right text",
+      },
+      
+      thirdRight = [{
+        path: "Third Right",
+        text: "Third right text",
+      },
+      {
+        path: "Third Left",
+        text: "Third Left text",
+      }],
+
+
+      {
+        path: "Second Left",
+        text: "Second Left text",
+      },
+      thirdLeft = [{
+        path: "Third Right",
+        text: "Third right text",
+      },
+      {
+        path: "Third Left",
+        text: "Third Left text",
+      }],
+    ]]
+  
+]
+// h11 = document.getElementById("h1").innerHTML
+// console.log(h11)
+
+console.log(paths[0][0].text)
+function testing(){
+  h1 = document.getElementById("h1").innerHTML
+  if(h1 == "Testing"){
+    console.log("works")
+    // document.getElementById("h1").classList.add("hidden")
+    document.getElementById("h1").innerHTML = paths[0][0].text
+  } else if(h1 === "First Right text"){
+    document.getElementById("h1").innerHTML = "test"
+  }
+}
+// testing()
+  rightButton = document.getElementById("right").addEventListener("click",testing)
+  // document.getElementById("left").addEventListener("click",hide)
+
+      // if(rightButton === "click"){
+      //   console.log("works")
+      // }
+
+  function hide(){
+    document.getElementById("h1").classList.add("hidden")
+    document.getElementById("h1").innerHTML = paths[0][0].text
+    setTimeout(function() {
+      document.getElementById("h1").classList.remove("hidden")
+    }, 1000)
+  }
+
+  // function hide(){
+  //   document.getElementById("h1").classList.add("hidden")
+  //   document.getElementById("h1").innerHTML = "test"
+
+  //   setTimeout(function() {
+  //     document.getElementById("h1").classList.remove("hidden")
+  //   }, 1000)
+  // }
+
+</script>

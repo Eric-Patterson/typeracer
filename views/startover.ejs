@@ -1,0 +1,18 @@
+<%layout('../layouts/boilerplate') %>
+
+<% function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+} %>
+ <% maze = ["/right/first", "/right/secondL", "/right/secondR"];
+ let randomItem = maze[Math.floor(Math.random() * maze.length)];%>
+
+<h1>Hello <%= capitalizeFirstLetter(username) %>, you got lost, lets try again</h1>
+<h2>You have two choices, left or right? Which would you prefer to take?</h2>
+<form method="post" action="/left/first">
+    <label for="name">Left</label>
+    <input type="submit" value="Submit">
+  </form>
+  <form method="post" action="<%= randomItem %>">
+    <label for="name">Right</label>
+    <input type="submit" value="Submit">
+  </form>
